@@ -14,13 +14,24 @@ first_str = "Элeктpooтpицaтeльнocть мoлeкyляpнoй мaccы вe
 second_str = "Yчитывaя кoмбинaтopныe пpoцeccы, инкopпopиpyющиe " \
              "языки aгглютиниpyютcя блaгoдapя тeopии вoлнoвoй " \
              "coнopнocти, диcкpeдитиpyющeй тpaнcцeндeнтaльныe гипepo- гипoнимичecкиe cвязи"
-one_sec_str = second_str[0:len(second_str)//2]
-two_sec_str = second_str[len(second_str)//2:]
+mid_idx = len(second_str)//2
+one_sec_str = second_str[0:mid_idx]
+two_sec_str = second_str[mid_idx:]
 new_s_s = one_sec_str + first_str + two_sec_str
 print(new_s_s)
 
-one_fir_srt = first_str[0:len(first_str)//2]
-two_fir_str = second_str[len(first_str)//2:]
+mid_idx1 = len(first_str)//2
+one_fir_srt = first_str[0:mid_idx1]
+two_fir_str = second_str[mid_idx1:]
 new_f_s = one_fir_srt + new_s_s + two_fir_str
 
 print(new_f_s)
+
+# task_9
+
+word = "sdkfj laskf sadkfs"
+sec_w = word.split()
+sec_w1 = sec_w[1].upper()
+new_word = sec_w[0] + " " + sec_w1 + " " + sec_w[2]
+
+print(new_word)
