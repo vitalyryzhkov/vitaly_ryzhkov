@@ -35,3 +35,18 @@ sec_w1 = sec_w[1].upper()
 new_word = sec_w[0] + " " + sec_w1 + " " + sec_w[2]
 
 print(new_word)
+
+# task_10
+
+leo = "Leo Tolstoy*1828-08-28*1910-11-20"
+idx1 = leo.find('*')
+name = leo[:idx1]
+idx2 = leo.find('-')
+date_idx = leo.find('*', idx1 + 1)
+birthday = leo[idx1 + 1:idx2]
+full_final = leo[date_idx + 1:]
+en_idx2 = full_final.find('-')
+final = full_final[:en_idx2]
+count_years = int(final) - int(birthday)
+
+print(name + "," + " " + str(count_years))
