@@ -22,7 +22,7 @@ print(new_s_s)
 
 mid_idx1 = len(first_str)//2
 one_fir_srt = first_str[0:mid_idx1]
-two_fir_str = second_str[mid_idx1:]
+two_fir_str = first_str[mid_idx1:]
 new_f_s = one_fir_srt + new_s_s + two_fir_str
 
 print(new_f_s)
