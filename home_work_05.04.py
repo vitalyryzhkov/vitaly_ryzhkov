@@ -50,3 +50,13 @@ final = full_final[:en_idx2]
 count_years = int(final) - int(birthday)
 
 print(name + "," + " " + str(count_years))
+
+# task_10_1
+
+leo = "Leo Tolstoy*1828-08-28*1910-11-20"
+full_text = leo.split('*')
+birthday = full_text[1].split('-')
+d_day = full_text[2].split('-')
+result = (int(d_day[0]) - int(birthday[0]))
+print(full_text[0] + ",", str(result))
+
