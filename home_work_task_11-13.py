@@ -43,3 +43,17 @@ def find_sum(any_number=int(input("Enter any number: "))):
     return number1 + number2 + number3
 
 print("The result of your equation is:",  find_sum())
+
+print_line()
+print_star()
+print("Task#13: Вычисление площади и периметра треугольника")
+print_line()
+
+def square_and_perimeter_triangle(kat1, kat2):
+    square = kat1 * kat2 / 2
+    perimeter = math.sqrt(pow(kat1, 2) + pow(kat2, 2)) + kat1 + kat2
+    print("Площадь прямоугольного треугольника равна: ", square)
+    print("Периметр прямоугольного треугольника равен: ", perimeter)
+    return square, perimeter
+
+square, perimeter = square_and_perimeter_triangle(int(input("Введите значение первого катета: ")), int(input("Введите значение второго катета: ")))
