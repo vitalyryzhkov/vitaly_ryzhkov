@@ -1,3 +1,5 @@
+# task_14
+
 def is_even(number):
     result = number % 2
     if result == 0:
@@ -7,3 +9,7 @@ def is_even(number):
     return result
 
 print(is_even(int(input("Введите число:"))))
+
+
+# task_15
+
