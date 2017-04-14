@@ -11,7 +11,6 @@ def is_even(number):
 
 
 # task_15
-
 # task_16
 
 # task_17
