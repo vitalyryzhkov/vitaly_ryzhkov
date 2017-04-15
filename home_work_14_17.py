@@ -15,23 +15,24 @@ print("Number is even?:", is_even(int(input("Enter any number: "))))
 from math import *
 
 x1 = 1
-x2 = 8
-y1 = 2
-y2 = 7
-r1 = 1
-r2 = 1
+x2 = 2
+y1 = 8
+y2 = 14
+r1 = 4
+r2 = 7
 
-def is_circles_intersect():
-    distance_between_radii = sqrt(pow((x2-x1), 2)+pow((y2-y1), 2))
-    if distance_between_radii <= (r1+r2):
+def circles_intersect():
+    distance_between_centers = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2))
+    result = distance_between_centers - (r1+r2)
+    if result >= 0:
         print("Circles is intersect")
     if x1 == x2 and y1 == y2 and r1 == r2:
-        print("Окружности одинаковы")
+        print("Circles are the same")
     else:
-        print("Окружности не пересекаются")
-        return distance_between_radii
+        print("Circles do not intersect")
+        return result
 
-is_circles_intersect()
+circles_intersect()
 
 # task_16
 
