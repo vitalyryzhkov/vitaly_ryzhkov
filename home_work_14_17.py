@@ -2,21 +2,23 @@
 
 def is_even(number):
     result = number % 2
-    if result == 0:
-        print("Число четное")
-    else:
-        print("Число нечетное")
-    return result
-(is_even(int(input("Введите число:"))))
+    return result == 0
+    # if result == 0:
+    #     return True
+    # else:
+    #     return False
+# print(type(is_even(5)))
+print("Number is even?:", is_even(int(input("Enter any number: "))))
 
 
 # task_15
 # task_16
 
 # task_17
+"""
 from math import *
 
-def root_square(a, b, c):
+def solve_quadratic_equation(a, b, c):
     diskr = pow(b, 2) - 4 * a * c
     if diskr > 0:
         x1 = (-b-sqrt(diskr))/(2*a)
@@ -31,5 +33,5 @@ a = int(input("Введите первый коэффициент квадрат
 b = int(input("Введите второй коэффициент квадратоного уравнения: "))
 c = int(input("Введите свободный член квадратоного уравнения: "))
 print("Результат вычисления квадратного уравнения при a = %d, b = %d и c = %d равен: "
-      % (a, b, c), root_square(a, b, c))
-
+      % (a, b, c), solve_quadratic_equation(a, b, c))
+"""
