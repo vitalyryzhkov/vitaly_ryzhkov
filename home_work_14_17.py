@@ -21,18 +21,11 @@ y2 = 14
 r1 = 4
 r2 = 7
 
-def circles_intersect():
+def is_circles_intersect():
     distance_between_centers = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2))
     result = distance_between_centers - (r1+r2)
-    if result >= 0:
-        print("Circles is intersect")
-    if x1 == x2 and y1 == y2 and r1 == r2:
-        print("Circles are the same")
-    else:
-        print("Circles do not intersect")
-        return result
-
-circles_intersect()
+    return result <= 0
+print("Is circles intersect?:", is_circles_intersect())
 
 # task_16
 
