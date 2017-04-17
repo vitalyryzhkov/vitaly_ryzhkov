@@ -12,20 +12,25 @@ print("Number is even?:", is_even(int(input("Enter any number: "))))
 """
 
 # task_15
-# from math import *
-#
-# x1 = 1
-# x2 = 2
-# y1 = 8
-# y2 = 14
-# r1 = 4
-# r2 = 7
-#
-# def is_circles_intersect():
-#     distance_between_centers = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2))
-#     result = distance_between_centers - (r1+r2)
-#     return result <= 0
-# print("Is circles intersect?:", is_circles_intersect())
+
+from math import *
+
+x1 = 1
+x2 = 2
+y1 = 8
+y2 = 14
+r1 = 7
+r2 = 3
+
+def is_circles_intersect():
+    distance_between_centers = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2))
+    if distance_between_centers > r1 + r2 and distance_between_centers < (r1 - r2):
+        return False
+    elif distance_between_centers == (r1 - r2) or (r1 + r2):
+        return True
+    elif distance_between_centers > (r1 - r2) and distance_between_centers < (r1 + r2):
+        return True
+print("Is circles intersect?:", is_circles_intersect())
 
 # task_16
 def train_collision_results(first_train_speed, second_train_speed):
