@@ -24,11 +24,11 @@ r2 = 3
 
 def is_circles_intersect():
     distance_between_centers = sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2))
-    if distance_between_centers > r1 + r2 and distance_between_centers < (r1 - r2):
+    if distance_between_centers > r1 + r2 or distance_between_centers < abs(r1 - r2):
         return False
-    elif distance_between_centers == (r1 - r2) or (r1 + r2):
+    elif distance_between_centers == abs(r1 - r2) or (r1 + r2):
         return True
-    elif distance_between_centers > (r1 - r2) and distance_between_centers < (r1 + r2):
+    elif distance_between_centers > abs(r1 - r2) or distance_between_centers < (r1 + r2):
         return True
 print("Is circles intersect?:", is_circles_intersect())
 
