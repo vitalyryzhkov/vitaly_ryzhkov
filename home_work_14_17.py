@@ -28,6 +28,14 @@ print("Number is even?:", is_even(int(input("Enter any number: "))))
 # print("Is circles intersect?:", is_circles_intersect())
 
 # task_16
+def train_collision_results(first_train_speed, second_train_speed):
+    first_train_time = 4 / first_train_speed
+    second_train_time = 6 / second_train_speed
+    if first_train_time > second_train_time:
+        return True
+    else:
+        return False
+print("Is trains are collision?:", train_collision_results(50, 70))
 
 first_train_speed = 50
 second_train_speed = 70
