@@ -4,9 +4,6 @@
 Получает месяц, день недели, день месяца. Т.е.:
 ``` def daylight_saving (month, week_day, day_of_month)```
 """
-# month = "January", "February", "March", "April", "May", "June", "July", "August", \
-#         "September", "October", "November", "December"
-# week_day = "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
 
 def daylight_saving (month, week_day, day_of_month):
     result1 = (month == "March" or month == "march") and (week_day == "Sunday" or week_day == "sunday") and (day_of_month > 24 and day_of_month <= 31)
