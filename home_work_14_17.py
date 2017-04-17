@@ -30,9 +30,9 @@ print("Number is even?:", is_even(int(input("Enter any number: "))))
 # task_16
 
 first_train_speed = 50
-second_tarin_speed = 70
+second_train_speed = 70
 first_train_time = 4 / first_train_speed
-second_train_time = 6 / second_tarin_speed
+second_train_time = 6 / second_train_speed
 
 if first_train_time < second_train_time:
     print("Поезда не столкнутся")
