@@ -16,6 +16,5 @@
 # task_20
 
 for x in range(1000):
-    if '1' in str(x):
-        if '7' in str(x):
+     if '1' in str(x) and '7' in str(x):
             print(x)
