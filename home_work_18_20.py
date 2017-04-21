@@ -1,12 +1,10 @@
 # task_18
 
-first_sym = ord('a')
-second_sym = ord('c')
-for i in range(first_sym, second_sym):
-    idx_sum = first_sym + second_sym
-    first_sym = first_sym + 1
-    second_sym = idx_sum
-print(idx_sum)
+def summ_of_unicode_symbols(first_sym, second_sym):
+    for i in range(first_sym, second_sym):
+        second_sym = i + second_sym
+    return second_sym
+print(summ_of_unicode_symbols(ord('a'), ord('c')))
 
 # task_19
 #
