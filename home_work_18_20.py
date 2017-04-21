@@ -6,7 +6,6 @@ for i in range(first_sym, second_sym):
     idx_sum = first_sym + second_sym
     first_sym = first_sym + 1
     second_sym = idx_sum
-    i = i + 1
 print(idx_sum)
 
 # task_19
