@@ -12,18 +12,74 @@
 
 # task_21
 
-def is_prime(x):
-    for i in range(1, x):
-        if i <= 2:
+# def is_prime(x):
+#     for i in range(1, x):
+#         if i <= 2:
+#             continue
+#         if x % i == 0 or x % 2 == 0:
+#             return False
+#     else:
+#         return True
+#
+# # print(isprime(11))
+#
+# for a in range(1, 101):
+#     if is_prime(a):
+#         print(a)
+
+# task_22
+
+# import random
+#
+# def random_twelve_num(lower_limit, upper_limit):
+#     num = random.randint(lower_limit, upper_limit)
+#     print("Рандомное двенадцатизначное число =", num)
+#     print("Двенадцатизначное число, разложенное на цифры:")
+#     max_num = 0
+#     for i in str(num):
+#         i = int(i)
+#         if max_num < i:
+#             max_num = i
+#         print(i)
+#     print("Максимальное из разложенных цифр =", max_num)
+#
+#
+# random_twelve_num(100000000000, 999999999999)
+
+# task_23
+
+# def factorial(n):
+#     if n == 1:
+#         return 1
+#     else:
+#         return n * factorial(n-1)
+# print(factorial(4))
+
+# task_24
+
+import random
+
+def find_number():
+    print("Для завершения, введите '111'")
+    prog_num = random.randint(0, 10)
+
+    while True:
+        num = int(input("Введите числов от 0 до 10:"))
+        if num == 111:
+            break
+
+        if num < 0 or num > 10:
+            print("Вы ввели неверное число, прочитайте условие!")
             continue
-        if x % i == 0 or x % 2 == 0:
-            return False
-    else:
-        return True
 
-# print(isprime(11))
+        if num < prog_num:
+            print("Больше")
 
-for a in range(1, 101):
-    if is_prime(a):
-        print(a)
+        elif num > prog_num:
+            print("Меньше")
 
+        elif num == prog_num:
+            print("Угадал")
+            break
+
+find_number()
