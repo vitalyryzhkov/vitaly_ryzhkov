@@ -19,8 +19,6 @@ def is_prime(x):
             return False
     return True
 
-# print(is_prime(11))
-
 for a in range(1, 101):
     if is_prime(a):
         print(a)
