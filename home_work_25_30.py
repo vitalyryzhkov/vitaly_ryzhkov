@@ -9,10 +9,10 @@
 
 # task_25
 
-lst = [1, 2, 3, 4, 5]
+lst = [1, 1, 1, 1, 1]
 def avr_lst(lst):
     sum_list_elem = 0
-    for i in range(len(lst)+1):
+    for i in lst:
         sum_list_elem += i
     print(sum_list_elem/len(lst))
 avr_lst(lst)
