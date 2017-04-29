@@ -19,22 +19,32 @@
 
 # task_26
 
-lst = [1, 2, 4, 5, 7, 8, 9]
+# lst = [1, 2, 4, 5, 7, 8, 9]
+#
+# def difference_even_odd(lst):
+#     sum_odd = 0
+#     sum_even = 0
+#     for i in lst:
+#         if i % 2 != 0:
+#             odd = i
+#             sum_odd += odd
+#         else:
+#             even = i
+#             sum_even += even
+#
+#     print(abs(sum_odd - sum_even))
+# difference_even_odd(lst)
 
-def difference_even_odd(lst):
-    sum_odd = 0
-    sum_even = 0
-    for i in lst:
-        if i % 2 != 0:
-            odd = i
-            sum_odd += odd
-        else:
-            even = i
-            sum_even += even
+# task_27
 
-    print(abs(sum_odd - sum_even))
-difference_even_odd(lst)
-
+import random
+lst = []
+for i in range(1, 100):
+    if i % 2 != 0:
+        lst.append(i)
+print(lst)
+random.shuffle(lst)
+print(lst)
 
 
 
