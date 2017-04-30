@@ -64,34 +64,52 @@ import random
 # avr_sum_lst1 = sum_lst1/len(lst1)
 # avr_sum_lst2 = sum_lst2/len(lst2)
 
-def create_list(num, lower_limit, upper_limit):
-    create_lst = []
-    for i in range(num):
-        create_lst.append(random.randint(lower_limit, upper_limit))
-    return create_lst
-
-def sum_list(lst):
-    sum_lst = 0
-    for i in lst:
-        sum_lst += i
-    return sum_lst
-
-lst1 = create_list(5, 0, 5)
-lst2 = create_list(5, 0, 5)
-sum_lst1 = sum_list(lst1)
-sum_lst2 = sum_list(lst2)
-avr_lst1 = sum_lst1/len(lst1)
-avr_lst2 = sum_lst2/len(lst2)
-
-print(lst1)
-print(lst2)
-if avr_lst1 > avr_lst2:
-    print("Среднее арифметическое первого списка больше")
-elif avr_lst1 < avr_lst2:
-    print("Среднее арифметическое второго списка больше")
-else:
-    print("Средние арифметические списков равны")
+# def create_list(num, lower_limit, upper_limit):
+#     create_lst = []
+#     for i in range(num):
+#         create_lst.append(random.randint(lower_limit, upper_limit))
+#     return create_lst
+#
+# def sum_list(lst):
+#     sum_lst = 0
+#     for i in lst:
+#         sum_lst += i
+#     return sum_lst
+#
+# lst1 = create_list(5, 0, 5)
+# lst2 = create_list(5, 0, 5)
+# sum_lst1 = sum_list(lst1)
+# sum_lst2 = sum_list(lst2)
+# avr_lst1 = sum_lst1/len(lst1)
+# avr_lst2 = sum_lst2/len(lst2)
+#
+# print(lst1)
+# print(lst2)
+# if avr_lst1 > avr_lst2:
+#     print("Среднее арифметическое первого списка больше")
+# elif avr_lst1 < avr_lst2:
+#     print("Среднее арифметическое второго списка больше")
+# else:
+#     print("Средние арифметические списков равны")
 
 # print(sum_lst1, avr_lst1)
 # print(sum_lst2, avr_lst2)
 # print(lst2, sum_lst2, avr_sum_lst2)
+
+# task_29
+
+lst = []
+for i in range(11):
+    lst.append(random.randint(-1, 1))
+a = lst.count(1)
+b = lst.count(0)
+c = lst.count(-1)
+d = 0
+if a > b and a > c:
+    d = 1
+elif b > a and b > c:
+    d = 0
+elif c > a and c > b:
+    d = -1
+print(lst)
+print("Чаще всего встречается:", d)
