@@ -35,16 +35,34 @@
 #     print(abs(sum_odd - sum_even))
 # difference_even_odd(lst)
 
-# task_27
+# task_27 попробовать еще варианты
+
+# import random
+# lst = []
+# for i in range(1, 100):
+#     if i % 2 != 0:
+#         lst.append(i)
+# print(lst)
+# random.shuffle(lst)
+# print(lst)
+
+# task_28
 
 import random
-lst = []
-for i in range(1, 100):
-    if i % 2 != 0:
-        lst.append(i)
-print(lst)
-random.shuffle(lst)
-print(lst)
+lst1 = []
+lst2 = []
+sum_lst1 = 0
+sum_lst2 = 0
+for i in range(5):
+    lst1.append(random.randint(0, 6))
+    lst2.append(random.randint(0, 6))
+for a in lst1:
+    sum_lst1 += a
+for c in lst2:
+    sum_lst2 += c
 
+avr_sum_lst1 = sum_lst1/len(lst1)
+avr_sum_lst2 = sum_lst2/len(lst2)
 
-
+print(lst1, sum_lst1, avr_sum_lst1)
+print(lst2, sum_lst2, avr_sum_lst2)
