@@ -37,18 +37,22 @@
 
 # task_27 попробовать еще варианты
 
-# import random
-# lst = []
-# for i in range(1, 100):
+import random
+# lst = [7, 8, 4, 2, 5]
+# lst1 = []
+# for i in lst:
+#     a = i+1
+#     print(a)
+# for i in range(1, 10):
 #     if i % 2 != 0:
 #         lst.append(i)
 # print(lst)
-# random.shuffle(lst)
-# print(lst)
+# for i in range(1, 12):
+#     lst1.insert(lst1, lst)
 
 # task_28
 
-import random
+# import random
 # lst1 = []
 # lst2 = []
 # sum_lst1 = 0
@@ -91,7 +95,7 @@ import random
 #     print("Среднее арифметическое второго списка больше")
 # else:
 #     print("Средние арифметические списков равны")
-
+#
 # print(sum_lst1, avr_lst1)
 # print(sum_lst2, avr_lst2)
 # print(lst2, sum_lst2, avr_sum_lst2)
@@ -105,11 +109,22 @@ a = lst.count(1)
 b = lst.count(0)
 c = lst.count(-1)
 d = 0
-if a > b and a > c:
-    d = 1
-elif b > a and b > c:
-    d = 0
-elif c > a and c > b:
-    d = -1
-print(lst)
-print("Чаще всего встречается:", d)
+def a2b2c(a, b, c):
+    # print(a, b, c)
+    if a == b or b == c or c == a:
+        return
+    if a > b and a > c:
+        d = 1
+    elif b > a and b > c:
+        d = 0
+    elif c > a and c > b:
+        d = -1
+    print(lst)
+    print("Чаще всего встречается:", d)
+a2b2c(a, b, c)
+# task_30
+
+# lst = ["а, б, в, г, д, о, 1, 2, 3, 4, 5, 6, -, 0"]
+# for i in lst:
+
+
