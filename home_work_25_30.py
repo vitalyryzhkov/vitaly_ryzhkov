@@ -38,17 +38,16 @@
 # task_27 попробовать еще варианты
 
 import random
-# lst = [7, 8, 4, 2, 5]
-# lst1 = []
-# for i in lst:
-#     a = i+1
-#     print(a)
-# for i in range(1, 10):
-#     if i % 2 != 0:
-#         lst.append(i)
-# print(lst)
-# for i in range(1, 12):
-#     lst1.insert(lst1, lst)
+lst = []
+lst1 = []
+for i in range(100):
+    if i % 2 != 0:
+        lst.append(i)
+print(lst)
+for i in lst:
+    a = random.randint(0, len(lst))
+    lst1.insert(a, i)
+print(lst1)
 
 # task_28
 
@@ -102,26 +101,26 @@ import random
 
 # task_29
 
-lst = []
-for i in range(11):
-    lst.append(random.randint(-1, 1))
-a = lst.count(1)
-b = lst.count(0)
-c = lst.count(-1)
-d = 0
-def a2b2c(a, b, c):
+# lst = []
+# for i in range(11):
+#     lst.append(random.randint(-1, 1))
+# a = lst.count(1)
+# b = lst.count(0)
+# c = lst.count(-1)
+# d = 0
+# def a2b2c(a, b, c):
     # print(a, b, c)
-    if a == b or b == c or c == a:
-        return
-    if a > b and a > c:
-        d = 1
-    elif b > a and b > c:
-        d = 0
-    elif c > a and c > b:
-        d = -1
-    print(lst)
-    print("Чаще всего встречается:", d)
-a2b2c(a, b, c)
+    # if a == b or b == c or c == a:
+    #     return
+    # if a > b and a > c:
+    #     d = 1
+    # elif b > a and b > c:
+    #     d = 0
+    # elif c > a and c > b:
+    #     d = -1
+    # print(lst)
+    # print("Чаще всего встречается:", d)
+# a2b2c(a, b, c)
 # task_30
 
 # lst = ["а, б, в, г, д, о, 1, 2, 3, 4, 5, 6, -, 0"]
