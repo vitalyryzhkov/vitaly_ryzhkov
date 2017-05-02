@@ -35,20 +35,22 @@
 #     print(abs(sum_odd - sum_even))
 # difference_even_odd(lst)
 
-# task_27 попробовать еще варианты
+# task_27
 
 import random
 lst = []
-lst1 = []
+# lst1 = []
 for i in range(100):
     if i % 2 != 0:
         lst.append(i)
 print(lst)
-for i in lst:
-    a = random.randint(0, len(lst))
-    lst1.insert(a, i)
-print(lst1)
-
+b = 0
+for i in range(len(lst)-1):
+    a = random.randint(i, len(lst)-1)
+    b = lst[a]
+    lst[a] = lst[i]
+    lst[i] = b
+print(lst)
 # task_28
 
 # import random
@@ -124,6 +126,12 @@ print(lst1)
 # task_30
 
 # lst = ["а, б, в, г, д, о, 1, 2, 3, 4, 5, 6, -, 0"]
+# a = "год-2016"
 # for i in lst:
+#     for j in a:
+#         if a[j] == lst[i]:
+#             x = lst[i]
+#         print(i)
+
 
 
