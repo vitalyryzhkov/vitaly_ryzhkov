@@ -33,7 +33,7 @@ for i in lst_number:
     if i % 2 != 0:
         multiply *= i
 """
-
+"""
 def multiply(number):
     str_number = str(number)
     lst_number = list(str_number)
@@ -43,7 +43,6 @@ def multiply(number):
         if i % 2 != 0:
             mult *= i
     return mult
-
 
 while True:
     number = input("Введите пятизначное число: ")
@@ -58,3 +57,15 @@ while True:
         print("Вы ввели не цифры, попробуйте еще раз")
         continue
 multiply(number)
+"""
+
+# task 5 Создать программу, выводящую на экран ближайшее к 10 из
+# двух чисел, введенных пользователем. Например, среди чисел 8,5 и 11,45 ближайшее к десяти 11,45.
+
+def nearest_number(main_num, first_num, second_num):
+    if abs(main_num - first_num) < abs(main_num - second_num):
+        print("Ближайшее число к основному - ", first_num)
+    else:
+        print("Ближайшее число к основному - ", second_num)
+nearest_number(10, 8.5, 11.45)
+
