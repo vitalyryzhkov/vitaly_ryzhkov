@@ -137,7 +137,7 @@ def encryption(input_string):
         find_idx = encryption_table.find(input_string[i])
         new_index = find_idx + 5
         if new_index > len(encryption_table):
-            new_index = find_idx - len(encryption_table) + 5
+            new_index = (find_idx + 5)%len(encryption_table)
         lst_password.append(lst_encryption_table[new_index])
     password = ''.join(lst_password)
     return password
