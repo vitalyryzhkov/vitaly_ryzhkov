@@ -69,7 +69,33 @@ def nearest_number(main_num, first_num, second_num):
         print("Ближайшее число к основному - ", second_num)
 nearest_number(10, 8.5, 11.45)
 """
+# task 6 Создать массив из 10 элементов и проинициализировать его простыми числами в случайном порядке
 
+import math
+import random
+
+def is_prime(x):
+    for i in range(2, int(math.sqrt(x))+1):
+        if x % i == 0:
+            return False
+    return True
+lst = []
+for a in range(2, 101):
+    if is_prime(a):
+        lst.append(a)
+lst1 = []
+b = 0
+for i in range(10):
+    a = random.randint(i, len(lst)-1)
+    b = lst[i]
+    lst[i] = lst[a]
+    lst[a] = b
+    # random.shuffle(lst)
+    lst1.append(lst[i])
+lst = lst1
+print(lst)
+
+"""
 # task 8 В одномерном массиве поменять местами минимальный и максимальный элементы. Остальные оставить на своих местах.
 
 import random
@@ -84,3 +110,4 @@ replace = lst[max_elem]
 lst[max_elem] = lst[min_elem]
 lst[min_elem] = replace
 print(lst)
+"""
