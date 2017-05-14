@@ -68,7 +68,7 @@ def nearest_number(main_num, first_num, second_num):
     else:
         print("Ближайшее число к основному - ", second_num)
 nearest_number(10, 8.5, 11.45)
-"""
+
 # task 6 Создать массив из 10 элементов и проинициализировать его простыми числами в случайном порядке
 
 import math
@@ -95,7 +95,21 @@ for i in range(10):
 lst = lst1
 print(lst)
 
-"""
+# task 7 Найти сумму десяти первых чисел ряда Фибоначчи.
+
+summ = 0
+def fib(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    elif n >= 2:
+        return (fib(n-1)) + (fib(n-2))
+
+for i in range(1, 11):
+    summ += fib(i)
+print(summ)
+
 # task 8 В одномерном массиве поменять местами минимальный и максимальный элементы. Остальные оставить на своих местах.
 
 import random
@@ -111,3 +125,4 @@ lst[max_elem] = lst[min_elem]
 lst[min_elem] = replace
 print(lst)
 """
+
