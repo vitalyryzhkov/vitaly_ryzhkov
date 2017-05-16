@@ -145,7 +145,7 @@ val_max=max(min_value, max_value)
 for i in range(len(lst)):
     lst[i] = (lst[i] / val_max)
 print(lst)
-"""
+
 # task 12 Для проверки остаточных знаний учеников после летних каникул, учитель младших классов
 # решил начинать каждый урок с того, чтобы задавать каждому ученику пример из таблицы умножения,
 # но в классе 15 человек, а примеры среди них не должны повторяться. В помощь учителю напишите
@@ -177,3 +177,27 @@ while len(final_lst) != 15:
     else:
         final_lst.append(exercise)
 print(final_lst)
+"""
+
+# task 10 Вывести на экран матрицу, транспонированную заданной (3*8)
+
+def print_table(table):
+    for line in table:
+        for elem in line:
+            print(elem, end="\t")
+        print()
+
+table = [
+    [1, 2, 3, 4, 5, 6, 7, 8],
+    [9, 8, 7, 6, 5, 4, 3, 2],
+    [7, 5, 2, 1, 3, 7, 5, 4]
+    ]
+new_table = [[0 for z in range(3)] for x in range(8)]
+
+print_table(table)
+print()
+
+for i in range(3):
+    for j in range(8):
+        new_table[j][i] = table[i][j]
+print_table(new_table)
