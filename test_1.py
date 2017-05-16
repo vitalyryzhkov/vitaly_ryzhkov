@@ -124,7 +124,7 @@ replace = lst[max_elem]
 lst[max_elem] = lst[min_elem]
 lst[min_elem] = replace
 print(lst)
-"""
+
 
 # task 9 Нормировать одномерный массив случайных чисел. Нормирование означает приведение всех
 # значений массива к интервалу [-1;1], причем максимальное абсолютное значение элементов
@@ -132,12 +132,48 @@ print(lst)
 # после нормирование будет выглядеть {-1, 0.6, 0.8}
 
 lst = [-5, 3, 4]
-max_value = abs(max(lst)-0)
-min_value = abs(min(lst)-0)
-if max_value > min_value:
-    val_max = max_value
-else:
-    val_max = min_value
+# max_value = abs(max(lst)-0)
+# min_value = abs(min(lst)-0)
+# if max_value > min_value:
+#     val_max = max_value
+# else:
+#     val_max = min_value
+max_value = abs(max(lst))
+min_value = abs(min(lst))
+val_max=max(min_value, max_value)
+
 for i in range(len(lst)):
     lst[i] = (lst[i] / val_max)
 print(lst)
+"""
+# task 12 Для проверки остаточных знаний учеников после летних каникул, учитель младших классов
+# решил начинать каждый урок с того, чтобы задавать каждому ученику пример из таблицы умножения,
+# но в классе 15 человек, а примеры среди них не должны повторяться. В помощь учителю напишите
+# программу, которая будет выводить на экран 15 случайных примеров из таблицы умножения
+# (от 2*2 до 9*9, потому что задания по умножению на 1 и на 10 — слишком просты). При этом среди
+# 15 примеров не должно быть повторяющихся (примеры 2*3 и 3*2
+# и им подобные пары считать повторяющимися)
+
+
+import random
+
+lst = list(range(2, 10))
+lst1 = list(range(2, 10))
+new_lst = []
+final_lst = []
+for i in range(len(lst)):
+    for j in range(len(lst1)):
+        if (str(lst[i]) + '*' + str(lst1[j])) in new_lst:
+            continue
+        elif (str(lst1[j]) + '*' + str(lst[i])) in new_lst:
+            continue
+        else:
+            new_lst.append((str(lst[i]) + '*' + str(lst1[j])))
+
+while len(final_lst) != 15:
+    exercise = random.choice(new_lst)
+    if exercise in final_lst:
+        continue
+    else:
+        final_lst.append(exercise)
+print(final_lst)
