@@ -192,12 +192,12 @@ table = [
     [9, 8, 7, 6, 5, 4, 3, 2],
     [7, 5, 2, 1, 3, 7, 5, 4]
     ]
-new_table = [[0 for z in range(3)] for x in range(8)]
+new_table = [[0 for z in range(len(table))] for x in range(len(table[0]))]
 
 print_table(table)
 print()
 
-for i in range(3):
-    for j in range(8):
+for i in range(len(table)):
+    for j in range(len(table[i])):
         new_table[j][i] = table[i][j]
 print_table(new_table)
