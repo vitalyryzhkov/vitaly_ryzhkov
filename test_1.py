@@ -160,16 +160,22 @@ import random
 lst = list(range(2, 10))
 lst1 = list(range(2, 10))
 new_lst = []
+final_lst = []
 for i in range(len(lst)):
     for j in range(len(lst1)):
-        mult_pair = "%s*%s" % (lst[i], lst1[j])
-        if mult_pair in new_lst or mult_pair[::-1] in new_lst:
+        if (str(lst[i]) + '*' + str(lst1[j])) in new_lst:
+            continue
+        elif (str(lst1[j]) + '*' + str(lst[i])) in new_lst:
             continue
         else:
-            new_lst.append(mult_pair)
+            new_lst.append((str(lst[i]) + '*' + str(lst1[j])))
 
-final_lst = list(set(new_lst))[:15]
-random.shuffle(final_lst)
+while len(final_lst) != 15:
+    exercise = random.choice(new_lst)
+    if exercise in final_lst:
+        continue
+    else:
+        final_lst.append(exercise)
 print(final_lst)
 """
 
@@ -186,12 +192,12 @@ table = [
     [9, 8, 7, 6, 5, 4, 3, 2],
     [7, 5, 2, 1, 3, 7, 5, 4]
     ]
-new_table = [[0 for z in range(len(table))] for x in range(len(table[0]))]
+new_table = [[0 for z in range(3)] for x in range(8)]
 
 print_table(table)
 print()
 
-for i in range(len(table)):
-    for j in range(len(table[i])):
+for i in range(3):
+    for j in range(8):
         new_table[j][i] = table[i][j]
 print_table(new_table)
