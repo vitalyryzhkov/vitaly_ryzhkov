@@ -177,7 +177,6 @@ while len(final_lst) != 15:
     else:
         final_lst.append(exercise)
 print(final_lst)
-"""
 
 # task 10 Вывести на экран матрицу, транспонированную заданной (3*8)
 
@@ -201,3 +200,4 @@ for i in range(3):
     for j in range(8):
         new_table[j][i] = table[i][j]
 print_table(new_table)
+"""
