@@ -163,19 +163,23 @@ new_lst = []
 final_lst = []
 for i in range(len(lst)):
     for j in range(len(lst1)):
-        if (str(lst[i]) + '*' + str(lst1[j])) in new_lst:
+        mult_pair = "%s*%s" % (lst[i], lst1[j])
+        if mult_pair in new_lst or mult_pair[::-1] in new_lst:
+        # if (str(lst[i]) + '*' + str(lst1[j])) in new_lst:
             continue
-        elif (str(lst1[j]) + '*' + str(lst[i])) in new_lst:
-            continue
+        # elif (str(lst1[j]) + '*' + str(lst[i])) in new_lst:
+        #     continue
         else:
             new_lst.append((str(lst[i]) + '*' + str(lst1[j])))
+final_lst = list(set(new_lst))[:15]
+random.shuffle(final_lst)
+# while len(final_lst) != 15:
+#     exercise = random.choice(new_lst)
+#     if exercise in final_lst:
+#         continue
+#     else:
+#         final_lst.append(exercise)
 
-while len(final_lst) != 15:
-    exercise = random.choice(new_lst)
-    if exercise in final_lst:
-        continue
-    else:
-        final_lst.append(exercise)
 print(final_lst)
 """
 
