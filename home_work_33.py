@@ -87,20 +87,17 @@ def update_students_results(group):
     return group
 
 def pretty_print(group):
+    form_line = '-' * 40
+    for student in group:
 
-    for i in group:
-
-        print('-' * 40)
-        print(": ID: %34s;" % i['id'])
-        print('-' * 40)
-        print(": Full name: %27s;" % i['fullname'])
-        print(": Email: %s" % i['email'])
-        print(": Giithub: %29s;" % i['github'][group[0]['github'].rindex('/') + 1:])
-        print(": Rank: %32s;" % i['rank'])
+        print(form_line)
+        print(": ID: %34s;" % student['id'])
+        print(form_line)
+        print(": Full name: %27s;" % student['fullname'])
+        print(": Email: %s" % student['email'])
+        print(": Giithub: %29s;" % student['github'][group[0]['github'].rindex('/') + 1:])
+        print(": Rank: %32s;" % student['rank'])
         print('_' * 40)
-        # print('_' * 40)
-
-
 
 def print_students_info(group, sort_by_key="fullname"):
     '''
