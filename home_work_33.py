@@ -61,7 +61,6 @@ test1_weights = {
     12 : 15
 }
 
-
 def update_students_results(group):
     '''
     Calculate student results and put them into the student dictionary under the key "rank".
