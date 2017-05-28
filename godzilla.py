@@ -2,9 +2,9 @@ from random import randint
 
 
 class Godzilla:
-    def __init__(self, volume_stomach, count_stomach_full):
+    def __init__(self, volume_stomach, count_stomach_full, stomach_full):
         self.volume_stomach = volume_stomach
-        self.stomach_full = volume_stomach * 0.9
+        self.stomach_full = stomach_full
         self.count_stomach_full = count_stomach_full
 
     def is_hungry(self, people_weight):
@@ -19,5 +19,5 @@ class Godzilla:
 
 
 people_weight = 0
-while Godzilla(100, 0).is_hungry(people_weight) == False:
+while Godzilla(100, 0, 90).is_hungry(people_weight) == False:
     people_weight = randint(1, 15)
