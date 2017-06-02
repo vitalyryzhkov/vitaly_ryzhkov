@@ -14,13 +14,13 @@ class Godzilla:
         if self.count_stomach_full < self.volume_stomach * Godzilla.CAPACITY_LIMIT:
             self.count_stomach_full += people_weight
             print("Godzilla ate", self.count_stomach_full, "kg, peoples meat.....")
-            return False
+            return True
         else:
             print("Godzilla is full and can no longer eat people")
-            return True
+            return False
 
 
 people_weight = 0
 godzilla = Godzilla(100, 0)
-while godzilla.is_hungry(people_weight) == False:
+while godzilla.is_hungry(people_weight) == True:
     people_weight = randint(1, 15)
